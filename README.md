@@ -1,1 +1,1 @@
-# Cognitive-Neuroscience-Lab
+# DAG-spike-lfp-analysis
