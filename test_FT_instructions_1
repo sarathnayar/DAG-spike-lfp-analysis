@@ -1,0 +1,20 @@
+test_FT_instructions_1
+
+download and install fieldtrip http://www.fieldtriptoolbox.org/
+download and install chronux http://chronux.org/
+
+clone https://github.com/dagdpz/test_FT
+clone https://github.com/igorkagan/Igtools
+
+Before using any fieldtrip functions, run ft_defaults
+
+Main file of interest: https://github.com/dagdpz/test_FT/blob/master/test_FT_spike_field_coherence.m
+
+This file simulates an LFP signal (sum of three sine waves plus noise) and spike signal (containing random spikes and spikes locked to the trough phase of one of the three LFP components), and runs spike-LFP ("spike-field") syncronization analyses, such as pairwise phase consistency, ppc (https://www.ncbi.nlm.nih.gov/pubmed/20114076) and coherence, coh (coherence so far only implemented using chronux). 
+
+The initial goal of simulation is to assess how ppc and coh vary as a function of firing rate (5:5:100 Hz) and spike locking probability (spikeLockProb, 0:0.1:1). The result should be the code that produces two series of 11 curves, plotted together: ppc and coh at the frequency of first LFP component, 10 Hz, as the function of the firing rate, for each of 11 spikeLockProb. 
+
+Please use the following settings for simulations:
+cfg.numtrl = 20;
+
+The rest of settings as in the current test_FT_spike_field_coherence code
